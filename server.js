@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const router = require("./routes/api")
+const router = require("./api")
 app.use("/api", router)
 app.get("/notes", async (req, res) => {
     res.sendFile(path.join(__dirname, "public/notes.html"))
